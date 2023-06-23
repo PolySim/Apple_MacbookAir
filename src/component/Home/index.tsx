@@ -7,11 +7,15 @@ export default function Home(): JSX.Element {
   const { scrollPosition } = useContext(ScrollContext);
 
   return (
-    <HomeStyled
-      opacity={scrollOpacity(scrollPosition)}
-      scale={scrollScale(scrollPosition)}
-    >
-      <div>MacBook Air</div>
+    <HomeStyled>
+      <div
+        style={{
+          opacity: scrollOpacity(scrollPosition),
+          transform: `scale(${scrollScale(scrollPosition)})`,
+        }}
+      >
+        MacBook Air
+      </div>
     </HomeStyled>
   );
 }

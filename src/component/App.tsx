@@ -8,8 +8,9 @@ export default function App(): JSX.Element {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrollPosition((curr) => window.scrollY);
+      setScrollPosition(window.scrollY);
     };
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrollPosition]);

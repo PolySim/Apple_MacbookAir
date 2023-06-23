@@ -24,16 +24,17 @@ export const MenuStyle = styled.div<{ height: string }>`
   }
 `;
 
-export const TitleStyle = styled.div<{ isFixed: boolean }>`
+export const TitleStyle = styled.div<{ isFixed: boolean; bgColor: string }>`
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
+  z-index: 100;
   position: ${(props) => (props.isFixed ? "fixed" : "relative")};
   top: 0;
   height: 66px;
   width: 100vw;
-  background-color: white;
+  background-color: ${(props) => props.bgColor};
 
   > div {
     display: flex;
@@ -126,17 +127,14 @@ export const EducationDiscountStyled = styled.div`
   }
 `;
 
-export const HomeStyled = styled.div<{
-  opacity: number;
-  scale: number;
-}>`
+export const HomeStyled = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   position: relative;
   width: 100vw;
-  height: 600vh;
+  height: 200vh;
 
   > div:nth-of-type(1) {
     position: fixed;
@@ -145,8 +143,7 @@ export const HomeStyled = styled.div<{
     font-size: 120px;
     font-weight: 600;
     height: fit-content;
-    opacity: ${(props) => props.opacity};
-    transform: scale(${(props) => props.scale}%);
-    transform-origin: 52.9% 60%;
+    transform-origin: 53.7% 60%;
+    letter-spacing: -3px;
   }
 `;

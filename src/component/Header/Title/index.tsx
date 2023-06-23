@@ -6,7 +6,10 @@ export default function Title(): JSX.Element {
   const { scrollPosition } = useContext(ScrollContext);
 
   return (
-    <TitleStyle isFixed={scrollPosition > 44}>
+    <TitleStyle
+      isFixed={scrollPosition > 44}
+      bgColor={scrollPosition > 172 ? "rgba(255, 255, 255, 0.8)" : "white"}
+    >
       <div>
         <div>
           <div>13" and 15" models with M2 chip</div>
