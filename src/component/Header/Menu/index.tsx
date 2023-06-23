@@ -1,5 +1,5 @@
 import React from "react";
-import { MenuStyle } from "../../../styled";
+import { MenuStyle } from "@/styled";
 import menus from "./listMenu";
 
 export default function Menu({

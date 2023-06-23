@@ -1,4 +1,4 @@
-import { TitleStyle } from "../../../styled";
+import { TitleStyle } from "@/styled";
 
 export default function Title(): JSX.Element {
   return (

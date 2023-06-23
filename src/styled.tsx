@@ -5,8 +5,6 @@ export const MenuStyle = styled.div`
   justify-content: center;
   width: 100vw;
   height: 44px;
-  font-family: Pro Text, SF Pro Icons, Helvetica Neue, Helvetica, Arial,
-    sans-serif;
   font-size: 12px;
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -122,5 +120,25 @@ export const EducationDiscountStyled = styled.div`
         width: min-content;
       }
     }
+  }
+`;
+
+export const HomeStyled = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 100vw;
+  height: 600vh;
+
+  > div:nth-of-type(1) {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 120px;
+    font-weight: 600;
+    height: fit-content;
+    opacity: 0.3;
   }
 `;
