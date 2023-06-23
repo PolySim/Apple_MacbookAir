@@ -1,8 +1,12 @@
+import { ScrollContext } from "@/context";
 import { TitleStyle } from "@/styled";
+import { useContext } from "react";
 
 export default function Title(): JSX.Element {
+  const { scrollPosition } = useContext(ScrollContext);
+
   return (
-    <TitleStyle>
+    <TitleStyle isFixed={scrollPosition > 44}>
       <div>
         <div>
           <div>13" and 15" models with M2 chip</div>

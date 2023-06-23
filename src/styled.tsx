@@ -1,10 +1,10 @@
 import styled from "styled-components";
 
-export const MenuStyle = styled.div`
+export const MenuStyle = styled.div<{ height: string }>`
   display: flex;
   justify-content: center;
   width: 100vw;
-  height: 44px;
+  height: ${(props) => props.height};
   font-size: 12px;
   font-weight: 400;
   letter-spacing: -0.01em;
@@ -24,13 +24,16 @@ export const MenuStyle = styled.div`
   }
 `;
 
-export const TitleStyle = styled.div`
+export const TitleStyle = styled.div<{ isFixed: boolean }>`
   display: flex;
   flex-direction: column;
   justify-content: end;
   align-items: center;
+  position: ${(props) => (props.isFixed ? "fixed" : "relative")};
+  top: 0;
   height: 66px;
   width: 100vw;
+  background-color: white;
 
   > div {
     display: flex;
@@ -84,7 +87,7 @@ export const TitleStyle = styled.div`
   }
   ::after {
     content: "";
-    width: min(100vw, 980px);
+    width: ${(props) => (props.isFixed ? "100vw" : "min(100vw, 980px)")};
     height: 1px;
     background-color: #ccc;
     margin-top: 12px;
@@ -123,7 +126,10 @@ export const EducationDiscountStyled = styled.div`
   }
 `;
 
-export const HomeStyled = styled.div`
+export const HomeStyled = styled.div<{
+  opacity: number;
+  scale: number;
+}>`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -134,11 +140,13 @@ export const HomeStyled = styled.div`
 
   > div:nth-of-type(1) {
     position: fixed;
-    top: 50%;
+    top: 40%;
     transform: translateY(-50%);
     font-size: 120px;
     font-weight: 600;
     height: fit-content;
-    opacity: 0.3;
+    opacity: ${(props) => props.opacity};
+    transform: scale(${(props) => props.scale}%);
+    transform-origin: 52.9% 60%;
   }
 `;

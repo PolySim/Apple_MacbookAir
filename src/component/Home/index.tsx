@@ -1,20 +1,16 @@
+import { ScrollContext } from "@/context";
 import { HomeStyled } from "@/styled";
-import { useEffect, useState } from "react";
+import { useContext } from "react";
+import { scrollOpacity, scrollScale } from "./calcStyleText";
 
 export default function Home(): JSX.Element {
-  const [scrollPosition, setScrollPosition] = useState<number>(0);
-
-  useEffect(() => {
-    console.log(scrollPosition);
-    const handleScroll = () => {
-      setScrollPosition((curr) => window.scrollY);
-    };
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [scrollPosition]);
+  const { scrollPosition } = useContext(ScrollContext);
 
   return (
-    <HomeStyled>
+    <HomeStyled
+      opacity={scrollOpacity(scrollPosition)}
+      scale={scrollScale(scrollPosition)}
+    >
       <div>MacBook Air</div>
     </HomeStyled>
   );
