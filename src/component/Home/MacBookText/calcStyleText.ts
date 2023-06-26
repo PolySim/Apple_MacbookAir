@@ -4,5 +4,7 @@ export const scrollOpacity = (scrollPosition: number): number => {
 
 export const scrollScale = (scrollPosition: number): number => {
   const scale = 0.3 + scrollPosition / (window.innerHeight / 2);
-  return Math.max(1, scale ** 5);
+  return scrollPosition < 1.3 * window.innerHeight
+    ? Math.max(1, scale ** 5)
+    : 0;
 };

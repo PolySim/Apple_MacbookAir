@@ -1,21 +1,14 @@
-import { ScrollContext } from "@/context";
 import { HomeStyled } from "@/styled";
-import { useContext } from "react";
-import { scrollOpacity, scrollScale } from "./calcStyleText";
+import MacBookText from "./MacBookText";
+import NowIn15 from "./NowIn15";
 
 export default function Home(): JSX.Element {
-  const { scrollPosition } = useContext(ScrollContext);
-
   return (
     <HomeStyled>
-      <div
-        style={{
-          opacity: scrollOpacity(scrollPosition),
-          transform: `scale(${scrollScale(scrollPosition)})`,
-        }}
-      >
-        MacBook Air
+      <div>
+        <MacBookText />
       </div>
+      <NowIn15 />
     </HomeStyled>
   );
 }

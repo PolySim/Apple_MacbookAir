@@ -1,0 +1,27 @@
+import { NowIn15Style } from "@/styled";
+import image from "./static.jpg";
+import { useContext } from "react";
+import { ScrollContext } from "@/context";
+import { scrollScale } from "../MacBookText/calcStyleText";
+import { opacityScaleNow15 } from "./animationImage";
+
+export default function NowIn15(): JSX.Element {
+  const { scrollPosition } = useContext(ScrollContext);
+  const { opacity, scale } = opacityScaleNow15(scrollPosition);
+
+  return (
+    <NowIn15Style
+      visible={scrollScale(scrollPosition) === 0}
+      fixed={scale < 0.8}
+    >
+      <div
+        style={{
+          backgroundColor: `rgba(0,0,0,${opacity})`,
+        }}
+      />
+      <div style={{ transform: `scale(${scale})` }}>
+        <img src={image} alt="MacBook Air 15'" />
+      </div>
+    </NowIn15Style>
+  );
+}

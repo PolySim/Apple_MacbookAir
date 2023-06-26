@@ -134,16 +134,48 @@ export const HomeStyled = styled.div`
   justify-content: center;
   position: relative;
   width: 100vw;
-  height: 200vh;
+  > div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 95vh;
+  }
+`;
+
+export const MacBookTextStyle = styled.div`
+  position: fixed;
+  top: 40%;
+  transform: translateY(-50%);
+  font-size: 120px;
+  font-weight: 600;
+  height: fit-content;
+  transform-origin: 53.7% 60%;
+  letter-spacing: -3px;
+`;
+
+export const NowIn15Style = styled.div<{ visible: boolean; fixed: boolean }>`
+  position: ${(props) => (props.fixed ? "absolute" : "relative")};
+  top: 110vh;
+  width: 100vw;
+  opacity: ${(props) => (props.visible ? "1" : "0")};
 
   > div:nth-of-type(1) {
-    position: fixed;
-    top: 40%;
-    transform: translateY(-50%);
-    font-size: 120px;
-    font-weight: 600;
-    height: fit-content;
-    transform-origin: 53.7% 60%;
-    letter-spacing: -3px;
+    position: absolute;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 200vh;
+  }
+
+  > div:nth-of-type(2) {
+    display: flex;
+    justify-content: center;
+    position: ${(props) => (props.fixed ? "fixed" : "relative")};
+    top: 0vh;
+    width: 100vw;
+    transform-origin: center;
   }
 `;
