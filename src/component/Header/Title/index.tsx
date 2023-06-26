@@ -8,7 +8,8 @@ export default function Title(): JSX.Element {
   return (
     <TitleStyle
       isFixed={scrollPosition > 44}
-      bgColor={scrollPosition > 172 ? "rgba(251,251,253,0.8)" : "white"}
+      bdFilter={scrollPosition > 172 ? "saturate(180%) blur(20px)" : "none"}
+      bgColor={scrollPosition > 172 ? "rgba(251, 251, 253, 0.8)" : "white"}
     >
       <div>
         <div>

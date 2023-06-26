@@ -24,7 +24,11 @@ export const MenuStyle = styled.div<{ height: string }>`
   }
 `;
 
-export const TitleStyle = styled.div<{ isFixed: boolean; bgColor: string }>`
+export const TitleStyle = styled.div<{
+  isFixed: boolean;
+  bdFilter: string;
+  bgColor: string;
+}>`
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -35,6 +39,7 @@ export const TitleStyle = styled.div<{ isFixed: boolean; bgColor: string }>`
   height: 66px;
   width: 100vw;
   background-color: ${(props) => props.bgColor};
+  backdrop-filter: ${(props) => props.bdFilter};
 
   > div {
     display: flex;
