@@ -5,6 +5,8 @@ import { ScrollContext } from "@/context";
 
 export default function App(): JSX.Element {
   const [scrollPosition, setScrollPosition] = useState<number>(0);
+  const [apparitionPresent15, setApparitionPresent15] =
+    useState<boolean>(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,6 +21,8 @@ export default function App(): JSX.Element {
     <ScrollContext.Provider
       value={{
         scrollPosition,
+        apparitionPresent15,
+        setApparitionPresent15,
       }}
     >
       <Header />

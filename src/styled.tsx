@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { keyframes, css } from "styled-components";
 
 export const MenuStyle = styled.div<{ height: string }>`
   display: flex;
@@ -182,5 +182,49 @@ export const NowIn15Style = styled.div<{ visible: boolean; fixed: boolean }>`
     top: 0vh;
     width: 100vw;
     transform-origin: center;
+  }
+`;
+
+const TextApparition = keyframes`
+  to{
+    transform: translateY(0);
+    opacity: 1;
+  }
+`;
+
+export const Present15Style = styled.div<{ visible: boolean }>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100vw;
+  top: 110vh;
+  opacity: 0;
+  transform: translateY(12px);
+
+  animation: ${(props) =>
+    props.visible
+      ? css`
+          ${TextApparition} 1s ease-in-out forwards
+        `
+      : css`none`};
+
+  > div {
+    width: 80vw;
+  }
+
+  > div:nth-of-type(1) {
+    font-size: 64px;
+    font-weight: bold;
+    line-height: -0.6px;
+  }
+
+  > div:nth-of-type(2) {
+    margin-top: 12px;
+    color: #86868b;
+    font-size: 24px;
+    b {
+      color: black;
+    }
   }
 `;

@@ -1,6 +1,6 @@
 import { NowIn15Style } from "@/styled";
 import image from "./static.jpg";
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { ScrollContext } from "@/context";
 import { scrollScale } from "../MacBookText/calcStyleText";
 import { opacityScaleNow15 } from "./animationImage";
@@ -8,6 +8,11 @@ import { opacityScaleNow15 } from "./animationImage";
 export default function NowIn15(): JSX.Element {
   const { scrollPosition } = useContext(ScrollContext);
   const { opacity, scale } = opacityScaleNow15(scrollPosition);
+  const { setApparitionPresent15 } = useContext(ScrollContext);
+
+  useEffect(() => {
+    setApparitionPresent15(scale > 0.8);
+  }, [scale, setApparitionPresent15]);
 
   return (
     <NowIn15Style
