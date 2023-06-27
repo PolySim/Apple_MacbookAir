@@ -3,6 +3,7 @@ import { ScrollContext } from "@/context";
 import { DesignStyle, TitleDesign } from "@/styled";
 import { useContext, useRef } from "react";
 import FirstDesignImage from "./Image";
+import Size from "../Size";
 
 export default function Design(): JSX.Element {
   const titleRef = useRef<HTMLDivElement>(null);
@@ -20,6 +21,7 @@ export default function Design(): JSX.Element {
         </div>
       </TitleDesign>
       <FirstDesignImage />
+      <Size />
     </DesignStyle>
   );
 }

@@ -307,3 +307,31 @@ export const FirstDesignImageStyle = styled.div`
     width: 100%;
   }
 `;
+
+export const SizeStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+
+  p {
+    margin-top: 24px;
+    font-size: 24px;
+    width: 80%;
+    color: #86868b;
+
+    span {
+      color: #1d1d1f;
+    }
+  }
+
+  /* Video */
+  > div:nth-of-type(1) {
+    margin-top: 24px;
+    width: 80%;
+
+    video {
+      width: 100%;
+    }
+  }
+`;
