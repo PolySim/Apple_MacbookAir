@@ -213,18 +213,52 @@ export const Present15Style = styled.div<{ visible: boolean }>`
     width: 80vw;
   }
 
+  /* Title */
   > div:nth-of-type(1) {
     font-size: 64px;
     font-weight: bold;
     line-height: -0.6px;
   }
 
+  /* Explication */
   > div:nth-of-type(2) {
-    margin-top: 12px;
+    margin-top: 24px;
     color: #86868b;
     font-size: 24px;
     b {
       color: black;
+    }
+  }
+
+  /* Price */
+  > div:nth-of-type(3) {
+    font-size: 19px;
+    margin-top: 24px;
+    span {
+      color: #bf4800;
+    }
+  }
+
+  /* Watch */
+  > div:nth-of-type(4) {
+    display: flex;
+    margin-top: 24px;
+    font-size: 19px;
+    color: #0066cc;
+
+    > div {
+      display: flex;
+      align-items: center;
+      height: 27px;
+
+      svg {
+        height: 20px;
+        margin-left: 6px;
+      }
+    }
+
+    > div:nth-of-type(2) {
+      margin-left: 24px;
     }
   }
 `;

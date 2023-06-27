@@ -25,15 +25,22 @@ export default function Present15(): JSX.Element {
       </div>
       <div>
         <div>13” model from $91.58/mo. for 12 mo. or $1099**</div>
-        <div>New 15” model from $108.25/mo. for 12 mo. or $1299**</div>
+        <div>
+          <span>New</span> 15” model from $108.25/mo. for 12 mo. or $1299**
+        </div>
       </div>
       <div>
-        <div>Watch the film</div>
+        <div>
+          Watch the film
+          <svg fill="#0066cc" viewBox="0 0 24 24">
+            <path d="M12,1A11,11,0,1,0,23,12,11.013,11.013,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9.011,9.011,0,0,1,12,21ZM10,8l6,4-6,4Z" />
+          </svg>
+        </div>
         <div>
           Watch the event
           <svg
-            width="34"
-            height="34"
+            // width="34"
+            // height="34"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
