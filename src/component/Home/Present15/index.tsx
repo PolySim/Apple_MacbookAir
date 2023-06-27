@@ -38,13 +38,7 @@ export default function Present15(): JSX.Element {
         </div>
         <div>
           Watch the event
-          <svg
-            // width="34"
-            // height="34"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path d="m9 18 6-6-6-6"></path>
           </svg>
         </div>

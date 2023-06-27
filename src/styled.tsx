@@ -262,3 +262,38 @@ export const Present15Style = styled.div<{ visible: boolean }>`
     }
   }
 `;
+
+export const DesignStyle = styled.div<{ visible: boolean }>`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+
+  > div:nth-of-type(1) {
+    height: ${(props) => (props.visible ? "120vh" : "200vh")};
+  }
+`;
+
+export const TitleDesign = styled.div<{ visible: boolean }>`
+  width: 80%;
+  opacity: 0;
+  transform: translateY(12px);
+
+  > p {
+    color: #1d1d1f;
+    font-size: 18px;
+    font-weight: 400;
+  }
+
+  > div:nth-of-type(1) {
+    font-size: 72px;
+    font-weight: 600;
+  }
+
+  animation: ${(props) =>
+    props.visible
+      ? css`
+          ${TextApparition} 1s ease-in-out forwards
+        `
+      : css`none`};
+`;
