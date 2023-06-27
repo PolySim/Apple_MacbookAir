@@ -10,6 +10,8 @@ export type OpacityScaleNow15 = (scrollPosition: number) => {
 };
 
 export type UseVisible = (
-  rootElRef: React.RefObject<HTMLDivElement>,
+  rootElRef: React.RefObject<HTMLElement>,
   top: string
 ) => boolean;
+
+export type ScaleVideoDesign = (scrollPosition: number) => number;

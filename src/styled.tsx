@@ -297,3 +297,13 @@ export const TitleDesign = styled.div<{ visible: boolean }>`
         `
       : css`none`};
 `;
+
+export const FirstDesignImageStyle = styled.div`
+  width: 100vw;
+  height: fit-content;
+  margin-top: 12px;
+
+  video {
+    width: 100%;
+  }
+`;
