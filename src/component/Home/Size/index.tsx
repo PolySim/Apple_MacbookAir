@@ -19,6 +19,10 @@ export default function Size(): JSX.Element {
         thin, so you can take yours anywhere.
       </p>
       <ColorImage />
+      <p>
+        <span>Four stellar colors.</span> Your options are out of this world —
+        and each one comes with a matching MagSafe charging cable.
+      </p>
     </SizeStyle>
   );
 }

@@ -210,7 +210,7 @@ export const Present15Style = styled.div<{ visible: boolean }>`
       : css`none`};
 
   > div {
-    width: 80vw;
+    width: min(85%, 980px);
   }
 
   /* Title */
@@ -275,7 +275,7 @@ export const DesignStyle = styled.div<{ visible: boolean }>`
 `;
 
 export const TitleDesign = styled.div<{ visible: boolean }>`
-  width: 80%;
+  width: min(85%, 980px);
   opacity: 0;
   transform: translateY(12px);
 
@@ -317,7 +317,7 @@ export const SizeStyle = styled.div`
   p {
     margin-top: 24px;
     font-size: 24px;
-    width: 80%;
+    width: min(85%, 980px);
     color: #86868b;
 
     span {
@@ -328,10 +328,82 @@ export const SizeStyle = styled.div`
   /* Video */
   > div:nth-of-type(1) {
     margin-top: 24px;
-    width: 80%;
+    width: min(85%, 980px);
 
     video {
       width: 100%;
     }
   }
+`;
+
+export const ImageSizeStyle = styled.div<{ nbFocus: number }>`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 48px;
+  width: min(85%, 980px);
+  height: fit-content;
+
+  > div {
+    width: 49%;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  /* Left part */
+
+  > div:nth-of-type(1) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    > div:nth-of-type(1) {
+      box-sizing: border-box;
+      padding: 43px 89px;
+      background-color: #fbfbfb;
+    }
+
+    > div:nth-of-type(2) {
+      margin-top: 24px;
+    }
+  }
+
+  /* Right part */
+
+  > div:nth-of-type(2) {
+    box-sizing: border-box;
+    background-color: #fbfbfb;
+    padding: 43px 89px;
+    height: fit-content;
+
+    > div {
+      display: flex;
+      margin-top: 36px;
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 25%;
+      }
+    }
+  }
+`;
+
+export const ButtonColor = styled.span<{ focus: boolean }>`
+  height: 32px;
+  width: 32px;
+  margin-bottom: 3px;
+  border-radius: 50%;
+  background-clip: content-box;
+  padding: 3px;
+  font-size: 12px;
+
+  ${(props) =>
+    props.focus
+      ? css`
+          border: 2px solid #0071e3;
+        `
+      : ""}
 `;
