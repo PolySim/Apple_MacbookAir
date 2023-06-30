@@ -1,5 +1,9 @@
 import styled, { keyframes, css } from "styled-components";
 
+const width = "min(85%, 980px)";
+const colorGray = "#86868B";
+const colorBlack = "#1D1D1F";
+
 export const MenuStyle = styled.div<{ height: string }>`
   display: flex;
   justify-content: center;
@@ -210,7 +214,7 @@ export const Present15Style = styled.div<{ visible: boolean }>`
       : css`none`};
 
   > div {
-    width: min(85%, 980px);
+    width: ${width};
   }
 
   /* Title */
@@ -275,7 +279,7 @@ export const DesignStyle = styled.div<{ visible: boolean }>`
 `;
 
 export const TitleDesign = styled.div<{ visible: boolean }>`
-  width: min(85%, 980px);
+  width: ${width};
   opacity: 0;
   transform: translateY(12px);
 
@@ -317,7 +321,7 @@ export const SizeStyle = styled.div`
   p {
     margin-top: 24px;
     font-size: 24px;
-    width: min(85%, 980px);
+    width: ${width};
     color: #86868b;
 
     span {
@@ -328,7 +332,7 @@ export const SizeStyle = styled.div`
   /* Video */
   > div:nth-of-type(1) {
     margin-top: 24px;
-    width: min(85%, 980px);
+    width: ${width};
 
     video {
       width: 100%;
@@ -340,7 +344,7 @@ export const ImageSizeStyle = styled.div<{ nbFocus: number }>`
   display: flex;
   justify-content: space-between;
   margin-top: 48px;
-  width: min(85%, 980px);
+  width: ${width};
   height: fit-content;
 
   > div {
@@ -406,4 +410,95 @@ export const ButtonColor = styled.span<{ focus: boolean }>`
           border: 2px solid #0071e3;
         `
       : ""}
+`;
+
+export const PerformanceStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  > p {
+    margin-top: 48px;
+    width: ${width};
+    color: ${colorGray};
+    font-size: 24px;
+
+    > span {
+      color: ${colorBlack};
+    }
+  }
+`;
+
+export const PerformanceTitle = styled(TitleDesign)`
+  margin-top: 96px;
+  > p {
+    font-size: 14px;
+  }
+`;
+
+export const VideoPerformanceStyle = styled.div`
+  margin-top: 48px;
+  width: 100%;
+
+  > video {
+    width: 100%;
+  }
+`;
+
+export const NumberPerformanceStyle = styled.div`
+  display: flex;
+  justify-content: space-between;
+  width: ${width};
+  margin-top: 48px;
+
+  > img {
+    width: 152px;
+    height: 152px;
+    padding-right: 48px;
+    border-right: 1px solid ${colorBlack};
+    margin-right: 48px;
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    width: calc(100% - 249px);
+
+    > div > p {
+      font-size: 19px;
+      color: ${colorGray};
+      font-weight: 500;
+
+      > sup {
+        font-size: 10px;
+      }
+    }
+
+    > div > p:nth-of-type(2) {
+      font-size: 72px;
+      color: ${colorBlack};
+    }
+  }
+`;
+
+export const ButtonGoInsideStyle = styled.div`
+  width: ${width};
+  margin-top: 48px;
+  font-size: 17px;
+  font-weight: 500;
+
+  > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+    border: 3px solid ${colorBlack};
+    border-radius: 96px;
+    padding: 12px 24px;
+
+    > svg {
+      margin-left: 6px;
+    }
+  }
 `;

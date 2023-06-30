@@ -3,6 +3,7 @@ import MacBookText from "./MacBookText";
 import NowIn15 from "./NowIn15";
 import Present15 from "./Present15";
 import Design from "./Design";
+import Performance from "./Performance";
 
 export default function Home(): JSX.Element {
   return (
@@ -13,6 +14,7 @@ export default function Home(): JSX.Element {
       <NowIn15 />
       <Present15 />
       <Design />
+      <Performance />
     </HomeStyled>
   );
 }
