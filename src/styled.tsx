@@ -496,9 +496,15 @@ export const ButtonGoInsideStyle = styled.div`
     border: 3px solid ${colorBlack};
     border-radius: 96px;
     padding: 12px 24px;
+    transition: 0.3s ease-out;
 
     > svg {
       margin-left: 6px;
+    }
+
+    :hover {
+      color: #fff;
+      background-color: ${colorBlack};
     }
   }
 `;
