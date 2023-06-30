@@ -508,3 +508,130 @@ export const ButtonGoInsideStyle = styled.div`
     }
   }
 `;
+
+export const NewToMacStyle = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 48px;
+  width: 100%;
+  background-color: #fbfbfb;
+  overflow-x: hidden;
+
+  > h1 {
+    color: ${colorBlack};
+    font-size: 48px;
+    font-weight: 500;
+    width: ${width};
+    margin-top: 48px;
+  }
+
+  /* Button to nav */
+
+  > div:nth-of-type(2) {
+    display: flex;
+    justify-content: end;
+    width: ${width};
+    margin: 96px 0 48px;
+  }
+`;
+
+export const TutorialsStyle = styled.div<{ transform: number }>`
+  display: flex;
+  width: 100vw;
+  margin-top: 48px;
+  transition: transform 0.2s ease-in-out;
+  transform: ${(props) => `translateX(${props.transform}px)`};
+
+  > div {
+    margin-right: 24px;
+    width: 310px;
+    height: 550px;
+
+    > img {
+      width: 310px;
+      height: 300px;
+      object-fit: cover;
+    }
+
+    > p {
+      margin-top: 24px;
+      color: ${colorGray};
+      font-size: 21px;
+      line-height: 24px;
+
+      > span {
+        color: ${colorBlack};
+        font-weight: 500;
+      }
+    }
+
+    > p:nth-of-type(2) {
+      color: #0066cc;
+      cursor: pointer;
+      font-size: 19px;
+
+      :hover {
+        text-decoration: underline;
+      }
+    }
+
+    /* Last tutorial */
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 310px;
+      height: 300px;
+      padding-left: 36px;
+      background-color: #fff;
+
+      > div {
+        display: flex;
+        align-items: end;
+        font-size: 32px;
+        font-weight: 500;
+        color: ${colorBlack};
+
+        > svg {
+          stroke-width: 4px;
+          color: lime;
+          margin-right: 6px;
+          padding-bottom: 6px;
+        }
+      }
+
+      > div:nth-of-type(4) {
+        margin-left: 30px;
+      }
+    }
+  }
+`;
+
+export const NavIntoTutorial = styled.div<{
+  clickable: boolean;
+  first?: boolean;
+}>`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  opacity: ${(props) => (props.clickable ? "1" : "0.2")};
+  background-color: rgba(210, 210, 215, 0.64);
+  color: ${colorGray};
+  margin-right: ${(props) => (props.first ? "18px" : "0")};
+
+  :hover {
+    background-color: ${(props) =>
+      props.clickable
+        ? "rgba(223,223,227,.6976)"
+        : "rgba(210, 210, 215, 0.64)"};
+  }
+
+  > svg {
+    stroke-width: 2px;
+  }
+`;
