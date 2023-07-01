@@ -536,74 +536,86 @@ export const NewToMacStyle = styled.div`
   }
 `;
 
-export const TutorialsStyle = styled.div<{ transform: number }>`
+export const TutorialsStyle = styled.div<{ padding: number }>`
   display: flex;
+  box-sizing: border-box;
   width: 100vw;
+  overflow-x: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  ::-webkit-scrollbar {
+    display: none;
+  }
+  scroll-snap-type: x mandatory;
   margin-top: 48px;
-  transition: transform 0.2s ease-in-out;
-  transform: ${(props) => `translateX(${props.transform}px)`};
+  scroll-padding: ${(props) => `0 ${props.padding}px`};
 
   > div {
-    margin-right: 24px;
-    width: 310px;
-    height: 550px;
-
-    > img {
-      width: 310px;
-      height: 300px;
-      object-fit: cover;
-    }
-
-    > p {
-      margin-top: 24px;
-      color: ${colorGray};
-      font-size: 21px;
-      line-height: 24px;
-
-      > span {
-        color: ${colorBlack};
-        font-weight: 500;
-      }
-    }
-
-    > p:nth-of-type(2) {
-      color: #0066cc;
-      cursor: pointer;
-      font-size: 19px;
-
-      :hover {
-        text-decoration: underline;
-      }
-    }
-
-    /* Last tutorial */
-
+    display: flex;
+    padding: ${(props) => `0 ${props.padding}px`};
     > div {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
+      margin-right: 24px;
       width: 310px;
-      height: 300px;
-      padding-left: 36px;
-      background-color: #fff;
+      height: 550px;
+      scroll-snap-align: start;
 
-      > div {
-        display: flex;
-        align-items: end;
-        font-size: 32px;
-        font-weight: 500;
-        color: ${colorBlack};
+      > img {
+        width: 310px;
+        height: 300px;
+        object-fit: cover;
+      }
 
-        > svg {
-          stroke-width: 4px;
-          color: lime;
-          margin-right: 6px;
-          padding-bottom: 6px;
+      > p {
+        margin-top: 24px;
+        color: ${colorGray};
+        font-size: 21px;
+        line-height: 24px;
+
+        > span {
+          color: ${colorBlack};
+          font-weight: 500;
         }
       }
 
-      > div:nth-of-type(4) {
-        margin-left: 30px;
+      > p:nth-of-type(2) {
+        color: #0066cc;
+        cursor: pointer;
+        font-size: 19px;
+
+        :hover {
+          text-decoration: underline;
+        }
+      }
+
+      /* Last tutorial */
+
+      > div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        width: 310px;
+        height: 300px;
+        padding-left: 36px;
+        background-color: #fff;
+
+        > div {
+          display: flex;
+          align-items: end;
+          font-size: 32px;
+          font-weight: 500;
+          color: ${colorBlack};
+
+          > svg {
+            stroke-width: 4px;
+            color: lime;
+            margin-right: 6px;
+            padding-bottom: 6px;
+          }
+        }
+
+        > div:nth-of-type(4) {
+          margin-left: 30px;
+        }
       }
     }
   }

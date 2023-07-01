@@ -2,14 +2,17 @@ import { NavIntoTutorial, NewToMacStyle } from "@/styled";
 import Tutorials from "./Tutorials";
 
 export default function NewToMac(): JSX.Element {
-  // const []
-
   return (
     <NewToMacStyle>
       <h1>New to Mac?</h1>
-      <Tutorials />
+      <Tutorials
+        padding={Math.max(
+          0.075 * window.innerWidth,
+          (window.innerWidth - 980) / 2
+        )}
+      />
       <div>
-        <NavIntoTutorial clickable first>
+        <NavIntoTutorial clickable={false} first>
           <svg
             width="24"
             height="24"
