@@ -1,4 +1,4 @@
-import { NavIntoTutorial, NewToMacStyle } from "@/styled";
+import { NewToMacStyle } from "@/styled";
 import Tutorials from "./Tutorials";
 
 export default function NewToMac(): JSX.Element {
@@ -11,30 +11,6 @@ export default function NewToMac(): JSX.Element {
           (window.innerWidth - 980) / 2
         )}
       />
-      <div>
-        <NavIntoTutorial clickable={false} first>
-          <svg
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="M15.375 5.25 8.625 12l6.75 6.75"></path>
-          </svg>
-        </NavIntoTutorial>
-        <NavIntoTutorial clickable>
-          <svg
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            viewBox="0 0 24 24"
-          >
-            <path d="m8.625 5.25 6.75 6.75-6.75 6.75"></path>
-          </svg>
-        </NavIntoTutorial>
-      </div>
     </NewToMacStyle>
   );
 }

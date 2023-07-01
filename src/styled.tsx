@@ -532,7 +532,7 @@ export const NewToMacStyle = styled.div`
     display: flex;
     justify-content: end;
     width: ${width};
-    margin: 96px 0 48px;
+    margin: 48px 0 48px;
   }
 `;
 
@@ -542,10 +542,12 @@ export const TutorialsStyle = styled.div<{ padding: number }>`
   width: 100vw;
   overflow-x: scroll;
   -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;
+  scrollbar-width: none; /* MF */
   ::-webkit-scrollbar {
+    /* Chrome and safari */
     display: none;
   }
+  scroll-behavior: smooth;
   scroll-snap-type: x mandatory;
   margin-top: 48px;
   scroll-padding: ${(props) => `0 ${props.padding}px`};
@@ -553,6 +555,7 @@ export const TutorialsStyle = styled.div<{ padding: number }>`
   > div {
     display: flex;
     padding: ${(props) => `0 ${props.padding}px`};
+    width: max-content;
     > div {
       margin-right: 24px;
       width: 310px;
