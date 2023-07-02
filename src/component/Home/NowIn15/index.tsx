@@ -1,5 +1,4 @@
 import { NowIn15Style } from "@/styled";
-import image from "./static.jpg";
 import { useContext, useEffect } from "react";
 import { ScrollContext } from "@/context";
 import { scrollScale } from "../MacBookText/calcStyleText";
@@ -25,7 +24,7 @@ export default function NowIn15(): JSX.Element {
         }}
       />
       <div style={{ transform: `scale(${scale})` }}>
-        <img src={image} alt="MacBook Air 15'" />
+        <img src={"/static.jpg"} alt="MacBook Air 15'" />
       </div>
     </NowIn15Style>
   );
