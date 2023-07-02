@@ -143,6 +143,7 @@ export const HomeStyled = styled.div`
   justify-content: center;
   position: relative;
   width: 100vw;
+  overflow-x: hidden;
   > div:nth-of-type(1) {
     display: flex;
     flex-direction: column;
