@@ -4,6 +4,18 @@ const width = "min(85%, 980px)";
 const colorGray = "#86868B";
 const colorBlack = "#1D1D1F";
 
+export const PhoneModeStyle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: #fad8d6;
+  color: #3b1c32;
+  font-size: 52px;
+  text-align: center;
+`;
+
 export const MenuStyle = styled.div<{ height: string }>`
   display: flex;
   justify-content: center;

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Header from "./Header";
 import Home from "./Home";
 import { ScrollContext } from "@/context";
+import PhoneMode from "./PhoneMode";
 
 export default function App(): JSX.Element {
   const [scrollPosition, setScrollPosition] = useState<number>(0);
@@ -17,6 +18,8 @@ export default function App(): JSX.Element {
     return () => window.removeEventListener("scroll", handleScroll);
   }, [scrollPosition]);
 
+  const windowWidth = window.innerWidth;
+
   return (
     <ScrollContext.Provider
       value={{
@@ -25,8 +28,15 @@ export default function App(): JSX.Element {
         setApparitionPresent15,
       }}
     >
-      <Header />
-      <Home />
+      {windowWidth < 850 ? (
+        <PhoneMode />
+      ) : (
+        <>
+          {" "}
+          <Header />
+          <Home />
+        </>
+      )}
     </ScrollContext.Provider>
   );
 }
