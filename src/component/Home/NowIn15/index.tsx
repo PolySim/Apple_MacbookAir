@@ -24,7 +24,7 @@ export default function NowIn15(): JSX.Element {
         }}
       />
       <div style={{ transform: `scale(${scale})` }}>
-        <img src={"/static.jpg"} alt="MacBook Air 15'" />
+        <img src={"/Apple_MacbookAir/static.jpg"} alt="MacBook Air 15'" />
       </div>
     </NowIn15Style>
   );
