@@ -1,11 +1,10 @@
-import { ButtonGoInsideStyle } from "@/styled";
-
-export default function ButtonGoInside(): JSX.Element {
+const ButtonGoInside = () => {
   return (
-    <ButtonGoInsideStyle>
-      <div>
+    <div className="w-text mt-12 font-medium">
+      <div className="flex justify-center items-center w-fit border-2 border-black rounded-full p-3 transition-all duration-300 hover:bg-black hover:text-white">
         Go inside M2
         <svg
+          className="ml-2"
           width="24"
           height="24"
           fill="none"
@@ -17,6 +16,8 @@ export default function ButtonGoInside(): JSX.Element {
           <path d="M15.75 12h-7.5"></path>
         </svg>
       </div>
-    </ButtonGoInsideStyle>
+    </div>
   );
-}
+};
+
+export default ButtonGoInside;

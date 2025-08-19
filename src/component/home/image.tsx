@@ -1,13 +1,12 @@
-import { ScrollContext } from "@/context";
 import { useVisible } from "@/hook/useVisible";
-import { FirstDesignImageStyle } from "@/styled";
-import { useContext, useEffect, useRef } from "react";
-import { scaleVideo } from "./calcScaleVideo";
+import { useWindowStore } from "@/store/window.store";
+import { useEffect, useRef } from "react";
+import { scaleVideo } from "./utils";
 
-export default function FirstDesignImage(): JSX.Element {
+const FirstDesignImage = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const isVisible = useVisible(videoRef, "-20px");
-  const { scrollPosition } = useContext(ScrollContext);
+  const scrollPosition = useWindowStore((state) => state.scrollPosition);
 
   useEffect(() => {
     const videoElement = videoRef.current;
@@ -19,14 +18,15 @@ export default function FirstDesignImage(): JSX.Element {
   }, [isVisible]);
 
   return (
-    <FirstDesignImageStyle
-      style={{ transform: `scale(${scaleVideo(scrollPosition)})` }}
-    >
+    <div style={{ transform: `scale(${scaleVideo(scrollPosition)})` }}>
       <video
+        className="w-full"
         ref={videoRef}
         muted
         src="https://www.apple.com/105/media/us/macbook-air-13-and-15/2023/f52c7a72-dff4-4f3c-9511-bf08e46c6f5f/anim/design/hero/large_2x.mp4"
       />
-    </FirstDesignImageStyle>
+    </div>
   );
-}
+};
+
+export default FirstDesignImage;

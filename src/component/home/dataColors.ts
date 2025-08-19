@@ -1,6 +1,4 @@
-import { DataColors } from "@/type";
-
-const dataColors: DataColors = {
+export const COLORS = {
   midnight: {
     name: "Midnight",
     bgColor: "#2e3642",
@@ -41,6 +39,4 @@ const dataColors: DataColors = {
     magSafe:
       "https://www.apple.com/v/macbook-air-13-and-15-m2/b/images/overview/design/color/design_magsafe_silver__fctds1k87eie_large.jpg",
   },
-};
-
-export default dataColors;
+} as const;

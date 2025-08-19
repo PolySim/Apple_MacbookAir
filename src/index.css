@@ -6,3 +6,26 @@ body {
     sans-serif;
   scroll-behavior: smooth;
 }
+
+@theme {
+  --animate-text-apparition: TextApparition 1s ease-in-out forwards;
+  --width-text: min(85%, 980px);
+
+  --color-bg-image: rgb(251, 251, 251);
+}
+
+@keyframes TextApparition {
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.disable-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.disable-scrollbar::-webkit-scrollbar {
+  display: none;
+}
