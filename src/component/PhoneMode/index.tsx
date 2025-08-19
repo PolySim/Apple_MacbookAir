@@ -1,9 +1,9 @@
-import { PhoneModeStyle } from "@/styled";
-
-export default function PhoneMode(): JSX.Element {
+const PhoneMode = () => {
   return (
-    <PhoneModeStyle>
-      <h1>Regardez le site sur un ordinateur !</h1>
-    </PhoneModeStyle>
+    <div className="flex flex-1 justify-center items-center w-full h-full bg-red-500 text-white text-5xl text-center">
+      <h1>Ce site est optimisé pour ordinateurs.</h1>
+    </div>
   );
-}
+};
+
+export default PhoneMode;

@@ -1,8 +1,8 @@
-import { useVisible } from "@/Function/useVisible";
+import { ScrollContext } from "@/context";
+import { useVisible } from "@/hook/useVisible";
 import { FirstDesignImageStyle } from "@/styled";
 import { useContext, useEffect, useRef } from "react";
 import { scaleVideo } from "./calcScaleVideo";
-import { ScrollContext } from "@/context";
 
 export default function FirstDesignImage(): JSX.Element {
   const videoRef = useRef<HTMLVideoElement>(null);

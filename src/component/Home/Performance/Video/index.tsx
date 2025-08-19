@@ -1,8 +1,8 @@
-import { useVisible } from "@/Function/useVisible";
+import { ScrollContext } from "@/context";
+import { useVisible } from "@/hook/useVisible";
 import { VideoPerformanceStyle } from "@/styled";
 import { useContext, useEffect, useRef } from "react";
 import { scaleVideoPerformance } from "./calcScale";
-import { ScrollContext } from "@/context";
 
 export default function VideoPerformance(): JSX.Element {
   const videoRef = useRef<HTMLVideoElement>(null);

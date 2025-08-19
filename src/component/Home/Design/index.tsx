@@ -1,9 +1,9 @@
-import { useVisible } from "@/Function/useVisible";
 import { ScrollContext } from "@/context";
+import { useVisible } from "@/hook/useVisible";
 import { DesignStyle, TitleDesign } from "@/styled";
 import { useContext, useRef } from "react";
-import FirstDesignImage from "./Image";
 import Size from "../Size";
+import FirstDesignImage from "./Image";
 
 export default function Design(): JSX.Element {
   const titleRef = useRef<HTMLDivElement>(null);

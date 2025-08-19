@@ -1,9 +1,9 @@
-import { useVisible } from "@/Function/useVisible";
+import { useVisible } from "@/hook/useVisible";
 import { PerformanceStyle, PerformanceTitle } from "@/styled";
 import { useRef } from "react";
-import VideoPerformance from "./Video";
-import NumberPerformance from "./Number";
 import ButtonGoInside from "./GoInside";
+import NumberPerformance from "./Number";
+import VideoPerformance from "./Video";
 
 export default function Performance(): JSX.Element {
   const titleRef = useRef<HTMLDivElement>(null);

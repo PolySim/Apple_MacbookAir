@@ -1,4 +1,4 @@
-import { useVisible } from "@/Function/useVisible";
+import { useVisible } from "@/hook/useVisible";
 import { useEffect, useRef } from "react";
 
 export default function VideoSize(): JSX.Element {

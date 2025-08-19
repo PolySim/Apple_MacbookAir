@@ -1,5 +1,5 @@
-import { useVisible } from "@/Function/useVisible";
 import { ScrollContext } from "@/context";
+import { useVisible } from "@/hook/useVisible";
 import { Present15Style } from "@/styled";
 import { useContext, useRef } from "react";
 

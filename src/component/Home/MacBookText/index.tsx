@@ -1,10 +1,9 @@
-import { ScrollContext } from "@/context";
-import { useContext } from "react";
-import { scrollOpacity, scrollScale } from "./calcStyleText";
+import { useWindowStore } from "@/store/window.store";
 import { MacBookTextStyle } from "@/styled";
+import { scrollOpacity, scrollScale } from "./calcStyleText";
 
 export default function MacBookText(): JSX.Element {
-  const { scrollPosition } = useContext(ScrollContext);
+  const scrollPosition = useWindowStore((state) => state.scrollPosition);
   return (
     <MacBookTextStyle
       style={{
