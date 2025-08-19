@@ -1,12 +1,12 @@
-import { ScrollContext } from "@/context";
 import { useVisible } from "@/hook/useVisible";
-import { useContext, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { scaleVideoPerformance } from "./utils";
+import { useWindowStore } from "@/store/window.store";
 
 const VideoPerformance = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const isVisible = useVisible(videoRef, "0px");
-  const { scrollPosition } = useContext(ScrollContext);
+  const scrollPosition = useWindowStore((state) => state.scrollPosition);
 
   useEffect(() => {
     const videoElement = videoRef.current;
